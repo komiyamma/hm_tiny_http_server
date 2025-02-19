@@ -1,0 +1,1 @@
+C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\bin\Release\net8.0\publish\win-x64\HmTinyHttpServer.exe

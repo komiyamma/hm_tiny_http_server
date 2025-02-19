@@ -1,0 +1,12 @@
+C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\bin\Release\net8.0\HmTinyHttpServer.exe
+C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\bin\Release\net8.0\HmTinyHttpServer.deps.json
+C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\bin\Release\net8.0\HmTinyHttpServer.runtimeconfig.json
+C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\bin\Release\net8.0\HmTinyHttpServer.dll
+C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\obj\Release\net8.0\HmTinyHttpServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\obj\Release\net8.0\HmTinyHttpServer.AssemblyInfoInputs.cache
+C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\obj\Release\net8.0\HmTinyHttpServer.AssemblyInfo.cs
+C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\obj\Release\net8.0\HmTinyHttpServer.csproj.CoreCompileInputs.cache
+C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\obj\Release\net8.0\HmTinyHttpServer.dll
+C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\obj\Release\net8.0\refint\HmTinyHttpServer.dll
+C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\obj\Release\net8.0\HmTinyHttpServer.genruntimeconfig.cache
+C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\obj\Release\net8.0\ref\HmTinyHttpServer.dll
