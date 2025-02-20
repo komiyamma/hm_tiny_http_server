@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\repogitory\\hm_tiny_http_server\\src\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmtinyhttpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmtinyhttpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HmTinyHttpServer.cs",
+              "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.cs",
+              "RelativeDocumentMoniker": "HmTinyHttpServer\\HmTinyHttpServer.cs",
+              "ToolTip": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.cs",
+              "RelativeToolTip": "HmTinyHttpServer\\HmTinyHttpServer.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAIwEwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T23:32:21.2Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

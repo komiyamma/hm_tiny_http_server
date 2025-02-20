@@ -10,3 +10,15 @@ C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\obj\Release\net8.
 C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\obj\Release\net8.0\refint\HmTinyHttpServer.dll
 C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\obj\Release\net8.0\HmTinyHttpServer.genruntimeconfig.cache
 C:\Users\master\source\repos\HmMiniHttpServer\HmMiniHttpServer\obj\Release\net8.0\ref\HmTinyHttpServer.dll
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\bin\Release\net8.0\HmTinyHttpServer.exe
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\bin\Release\net8.0\HmTinyHttpServer.deps.json
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\bin\Release\net8.0\HmTinyHttpServer.runtimeconfig.json
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\bin\Release\net8.0\HmTinyHttpServer.dll
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0\HmTinyHttpServer.GeneratedMSBuildEditorConfig.editorconfig
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0\HmTinyHttpServer.AssemblyInfoInputs.cache
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0\HmTinyHttpServer.AssemblyInfo.cs
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0\HmTinyHttpServer.csproj.CoreCompileInputs.cache
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0\HmTinyHttpServer.dll
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0\refint\HmTinyHttpServer.dll
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0\HmTinyHttpServer.genruntimeconfig.cache
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0\ref\HmTinyHttpServer.dll

@@ -30,6 +30,8 @@ internal class HmTinyHttpServer
             return;
         }
 
+        AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
+
         try
         {
             phpServerDocumentFolder = args[0];
@@ -64,9 +66,15 @@ internal class HmTinyHttpServer
             }
         }
 
-        server.Destroy();
+        server?.Destroy();
         Console.WriteLine($"秀丸ウィンドウハンドル:{hmWndHandle}から呼ばれた{nameof(HmTinyHttpServer)}はクローズします。");
         // 何か外部からインプットがあれば終了し、このserverインスタンスが終われば、対応したphpサーバープロセスもkillされる。
+    }
+
+    private static void OnProcessExit(object sender, EventArgs e)
+    {
+        server?.Destroy();
+        Console.WriteLine("OnProcessExit");
     }
 
     static Process phpProcess;
