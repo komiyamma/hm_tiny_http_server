@@ -12,6 +12,7 @@
 	<Version>1.1.1.1</Version>
 	<Authors>Akitsugu Komiyama</Authors>
 	<Copyright>2025 @ $(Authors)</Copyright>
+	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

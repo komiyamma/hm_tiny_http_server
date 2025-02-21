@@ -1,0 +1,43 @@
+﻿jsmode "WebView2\\" + currentmacrofilename;
+
+js{
+
+debuginfo(2);
+var processInfo; // 初期化しないこと
+
+if (processInfo) {
+    processInfo.stdIn.writeLine("exit");
+}
+
+var serverRootFolder = "C:\\あいうえお";
+var command = sprintf('%s\\%s "%s" %d', macrodir(), "HmTinyHttpServer\\HmTinyHttpServer.exe", serverRootFolder, hidemaru.getCurrentWindowHandle());
+console.log(command);
+
+processInfo = hidemaru.runProcess( command, ".", "stdioAlive", "utf8" );
+if (processInfo) {
+    const output = processInfo.stdOut?.readLine(1000);
+    var port = Number(output);
+    if (port > 0) {
+        openBrowserPane(port);
+    } else {
+        console.log("あかんやつ");
+    }
+}
+
+function openBrowserPane(port) {
+    var url = `http://localhost:${port}/index.html`;
+
+    console.log(url);
+    browserpanecommand(
+    {
+        target: "_each",
+        url: url,
+        show: 1,
+        size: 500,
+        initialize: "async"
+    });
+}
+
+
+} // js
+

@@ -32,6 +32,7 @@ internal class HmTinyHttpServer
             var line = Console.ReadLine();
             if (line.Contains("exit"))
             {
+                server?.Destroy();
                 break;
             }
         }
@@ -57,7 +58,7 @@ internal class HmTinyHttpServer
 
         server = new HmTinyHttpServer();
         int port = server.Launch();
-        Console.WriteLine("PORT:" + port);
+        Console.WriteLine(port); // ポート番号の出力
         if (port == 0)
         {
             return;
