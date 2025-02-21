@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmtinyhttpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmtinyhttpserver.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmtinyhttpserver.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\master\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.13\\build\\Microsoft.NETCore.Native.Publish.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -17,7 +21,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +30,17 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "HmTinyHttpServer",
+              "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.csproj",
+              "RelativeDocumentMoniker": "HmTinyHttpServer\\HmTinyHttpServer.csproj",
+              "ToolTip": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.csproj",
+              "RelativeToolTip": "HmTinyHttpServer\\HmTinyHttpServer.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-21T12:31:55.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Microsoft.NETCore.Native.Publish.targets",
               "DocumentMoniker": "C:\\Users\\master\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.13\\build\\Microsoft.NETCore.Native.Publish.targets",
               "ToolTip": "C:\\Users\\master\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.13\\build\\Microsoft.NETCore.Native.Publish.targets",
@@ -41,7 +56,7 @@
               "RelativeDocumentMoniker": "HmTinyHttpServer\\HmTinyHttpServer.cs",
               "ToolTip": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.cs",
               "RelativeToolTip": "HmTinyHttpServer\\HmTinyHttpServer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAM8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T23:32:21.2Z",
               "EditorCaption": ""

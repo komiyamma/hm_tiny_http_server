@@ -1,0 +1,12 @@
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\bin\Release\net8.0-windows\HmTinyHttpServer.exe
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\bin\Release\net8.0-windows\HmTinyHttpServer.deps.json
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\bin\Release\net8.0-windows\HmTinyHttpServer.runtimeconfig.json
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\bin\Release\net8.0-windows\HmTinyHttpServer.dll
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0-windows\HmTinyHttpServer.GeneratedMSBuildEditorConfig.editorconfig
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0-windows\HmTinyHttpServer.AssemblyInfoInputs.cache
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0-windows\HmTinyHttpServer.AssemblyInfo.cs
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0-windows\HmTinyHttpServer.csproj.CoreCompileInputs.cache
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0-windows\HmTinyHttpServer.dll
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0-windows\refint\HmTinyHttpServer.dll
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0-windows\HmTinyHttpServer.genruntimeconfig.cache
+G:\repogitory\hm_tiny_http_server\src\HmTinyHttpServer\obj\Release\net8.0-windows\ref\HmTinyHttpServer.dll

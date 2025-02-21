@@ -7,7 +7,6 @@ using System.Diagnostics;
 using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 
-
 internal class HmTinyHttpServer
 {
     [DllImport("user32.dll", SetLastError = true)]
@@ -88,6 +87,11 @@ internal class HmTinyHttpServer
             if (inputTask.IsCompleted) // 何か標準入力があっても終了
             {
                 // Console.WriteLine("標準入力監視タスクが完了したので終了します。");
+                break;
+            }
+            if (Environment.HasShutdownStarted || Environment.has)
+            {
+                // Console.WriteLine("Environment.HasShutdownStartedがtrueになったので終了します。");
                 break;
             }
         }
