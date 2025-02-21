@@ -8,13 +8,13 @@ debuginfo(2);
 server?.close();
 
 var server = createTinyHttpServer({rootFolder:"C:\\あいうえお"});
-var port = server?.start();
+const port = server?.start();
 if (port) {
     openBrowserPane(port);
 }
 
 function openBrowserPane(port) {
-    let url = `http://localhost:${port}/index.html`;
+    const url = `http://localhost:${port}/index.html`;
 
     console.log(url);
     browserpanecommand(
