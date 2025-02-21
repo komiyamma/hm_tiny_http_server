@@ -1,0 +1,51 @@
+﻿jsmode "JScript\\" + currentmacrofilename;
+
+js{
+
+debuginfo(2);
+var processInfo; // 初期化しないこと
+
+// 前回このjs実行空間内でサーバーを立ち上げてるなら終了
+if (processInfo) {
+    processInfo.stdIn.writeLine("exit");
+}
+
+// ルートフォルダ
+var rootFolder = "C:\\あいうえお";
+
+// コマンドライン構築
+var command = sprintf('%s\\%s "%s" %d', macrodir(), "HmTinyHttpServer\\HmTinyHttpServer.exe", rootFolder, hidemaru.getCurrentWindowHandle());
+console.log(command);
+
+// 実行してみる
+processInfo = hidemaru.runProcess( command, ".", "stdioAlive", "utf8" );
+if (processInfo) {
+
+    // ポート番号が出てくるので待つ。0.1～0.2秒程度なので、以下のように同期的に待っても影響は少ないいが、不安なら非同期のonReadLineの書き方でもよい。
+    var output = processInfo.stdOut.readLine(1000);
+
+    var port = Number(output);
+    if (port > 0) {
+        openBrowserPane(port);
+    } else {
+        console.log("あかんやつ");
+    }
+}
+
+function openBrowserPane(port) {
+    var url = "http://localhost:" + port + "/index.html";
+
+    console.log(url);
+    browserpanecommand(
+    {
+        target: "_each",
+        url: url,
+        show: 1,
+        size: 500,
+        initialize: "async"
+    });
+}
+
+
+} // js
+
