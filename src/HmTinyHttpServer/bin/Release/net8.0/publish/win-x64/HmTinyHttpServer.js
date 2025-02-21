@@ -1,7 +1,9 @@
 
+var createTinyHttpServer;
+
 (function () {
 
-    var currentJsFileName = currentjsfilename();
+    var currentJsFileName = hidemaruGlobal.currentjsfilename();
     var splitted = currentJsFileName.split("\\");
     splitted.pop();
     var currentJsDirectory = splitted.join("\\");
@@ -23,7 +25,7 @@
             return null;
         }
 
-        var is_directory = existfile(props.rootFolder, 1) & 0x00000010;
+        var is_directory = hidemaruGlobal.existfile(props.rootFolder, 1) & 0x00000010;
         if (!is_directory) {
             output("「" + props.rootFolder + "」というフォルダ存在しません。");
             return null;
@@ -35,7 +37,7 @@
 
             start: function () {
                 // コマンドライン構築
-                var command = sprintf('%s\\%s "%s" %d', currentJsDirectory, "\\HmTinyHttpServer.exe", props.rootFolder, hidemaru.getCurrentWindowHandle());
+                var command = hidemaruGlobal.sprintf('%s\\%s "%s" %d', currentJsDirectory, "\\HmTinyHttpServer.exe", props.rootFolder, hidemaru.getCurrentWindowHandle());
 
                 // 実行してみる
                 this.processInfo = hidemaru.runProcess(command, ".", "stdioAlive", "utf8");
