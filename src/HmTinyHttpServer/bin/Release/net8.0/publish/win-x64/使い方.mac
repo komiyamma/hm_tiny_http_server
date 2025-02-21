@@ -1,37 +1,25 @@
 ﻿jsmode "JScript\\" + currentmacrofilename;
 
+execjs macrodir + @"\HmTinyHttpServer\HmTinyHttpServer.js";
+
 js{
 
 debuginfo(2);
-var processInfo; // 初期化しないこと。マクロ実行空間を超えて維持する必要があるので、var
+var server; // 初期化しないこと。マクロ実行空間を超えて維持する必要があるので、var
 
-{
-    // 前回この「currentmacrofilename」でのjs実行空間内でサーバーを立ち上げてるなら終了
-    if (processInfo) {
-        processInfo.stdIn.writeLine("exit");
-    }
+if (server) {
+    server.close();
+}
 
-    // ルートフォルダ
-    var rootFolder = "C:\\あいうえお";
+server = createTinyHttpServer({rootFolder:"C:\\あいうえお"});
+var port = 0;
 
-    // コマンドライン構築
-    var command = sprintf('%s\\%s "%s" %d', macrodir(), "HmTinyHttpServer\\HmTinyHttpServer.exe", rootFolder, hidemaru.getCurrentWindowHandle());
-    console.log(command);
+if (server) {
+    port = server.start();
+}
 
-    // 実行してみる
-    processInfo = hidemaru.runProcess( command, ".", "stdioAlive", "utf8" );
-    if (processInfo) {
-
-        // ポート番号が出てくるので待つ。0.1～0.2秒程度なので、以下のように同期的に待っても影響は少ないいが、不安なら非同期のonReadLineの書き方でもよい。
-        var output = processInfo.stdOut.readLine(1000);
-
-        var port = Number(output);
-        if (port > 0) {
-            openBrowserPane(port);
-        } else {
-            console.log("あかんやつ");
-        }
-    }
+if (port) {
+    openBrowserPane(port);
 }
 
 function openBrowserPane(port) {
