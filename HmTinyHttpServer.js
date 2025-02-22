@@ -7,8 +7,11 @@
 var createTinyHttpServer;
 
 (function () {
-
-    var currentJsFileName = hidemaruGlobal.currentjsfilename();
+    // 定義済みなら何もしない
+    if (typeof(createTinyHttpServer) == "function") {
+        return;
+    }
+    var currentJsFileName = hidemaruGlobal.currentjsfilename() || hidemaruGlobal.currentmacrofilename();
     var splitted = currentJsFileName.split("\\");
     splitted.pop();
     var currentJsDirectory = splitted.join("\\");
@@ -69,5 +72,10 @@ var createTinyHttpServer;
         };
 
     }
+
+    if (typeof (module) != 'undefined' && module.exports) {
+        module.exports = createTinyHttpServer;
+    }
+
 
 })();
