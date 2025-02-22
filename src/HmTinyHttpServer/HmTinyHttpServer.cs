@@ -89,7 +89,7 @@ internal class HmTinyHttpServer
                 // Console.WriteLine("標準入力監視タスクが完了したので終了します。");
                 break;
             }
-            if (Environment.HasShutdownStarted || Environment.has)
+            if (Environment.HasShutdownStarted)
             {
                 // Console.WriteLine("Environment.HasShutdownStartedがtrueになったので終了します。");
                 break;
