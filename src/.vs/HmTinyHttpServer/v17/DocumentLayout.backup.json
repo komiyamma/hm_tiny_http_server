@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmtinyhttpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmphpprocessserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmphpprocessserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmgetfreeport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmgetfreeport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmtinyhttpserver.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmtinyhttpserver.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
@@ -21,7 +29,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +38,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "HmPhpProcessServer.cs",
+              "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmPhpProcessServer.cs",
+              "RelativeDocumentMoniker": "HmTinyHttpServer\\HmPhpProcessServer.cs",
+              "ToolTip": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmPhpProcessServer.cs",
+              "RelativeToolTip": "HmTinyHttpServer\\HmPhpProcessServer.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwAIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T22:28:37.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HmGetFreePort.cs",
+              "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmGetFreePort.cs",
+              "RelativeDocumentMoniker": "HmTinyHttpServer\\HmGetFreePort.cs",
+              "ToolTip": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmGetFreePort.cs",
+              "RelativeToolTip": "HmTinyHttpServer\\HmGetFreePort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T22:25:24.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HmTinyHttpServer",
               "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.csproj",
               "RelativeDocumentMoniker": "HmTinyHttpServer\\HmTinyHttpServer.csproj",
@@ -40,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Microsoft.NETCore.Native.Publish.targets",
               "DocumentMoniker": "C:\\Users\\master\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.13\\build\\Microsoft.NETCore.Native.Publish.targets",
               "ToolTip": "C:\\Users\\master\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.13\\build\\Microsoft.NETCore.Native.Publish.targets",
@@ -56,7 +90,7 @@
               "RelativeDocumentMoniker": "HmTinyHttpServer\\HmTinyHttpServer.cs",
               "ToolTip": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.cs",
               "RelativeToolTip": "HmTinyHttpServer\\HmTinyHttpServer.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAAwFsAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAcwIMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T23:32:21.2Z",
               "EditorCaption": ""

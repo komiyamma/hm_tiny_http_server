@@ -3,18 +3,16 @@
  * under the MIT License
  */
 
-using System.Diagnostics;
-using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 
-internal class HmTinyHttpServer
+internal partial class HmTinyHttpServer
 {
     [DllImport("user32.dll", SetLastError = true)]
     static extern bool IsWindow(nint hWnd);
 
     static nint hmWndHandle = 0;
 
-    static HmTinyHttpServer server;
+    static HmPhpProcessServer server;
 
     static string phpExePath = Path.Combine(System.AppContext.BaseDirectory, "php.exe");
 
@@ -44,8 +42,6 @@ internal class HmTinyHttpServer
             return;
         }
 
-        AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
-
         try
         {
             phpServerDocumentFolder = args[0];
@@ -55,7 +51,7 @@ internal class HmTinyHttpServer
             return;
         }
 
-        server = new HmTinyHttpServer();
+        server = new HmPhpProcessServer();
         int port = server.Launch();
         Console.WriteLine(port); // ポート番号の出力
         if (port == 0)
@@ -63,8 +59,17 @@ internal class HmTinyHttpServer
             return;
         }
 
+        // 秀丸側のrunProcessのstdioAliveのprocessの終わらせ方が判然としない
+        // ProcessExitにも反応する
+        AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
+
+        // 秀丸側のrunProcessのstdioAliveのprocessの終わらせ方が判然としない
+        // Win32レベルで、シャットダウンやログアウトも含めこのコンソールへの終了のあらゆる促しに感知するようにしておく
+        SetConsoleCtrlHandler(ConsoleCtrlCheck, true);
+
         // 標準入力監視タスクを開始
         Task inputTask = Task.Run(InputTask);
+
 
         while (true)
         {
@@ -74,6 +79,8 @@ internal class HmTinyHttpServer
                 // Console.WriteLine("hmWndHandleが存在しなくなったので終了します。");  
                 break;
             }
+
+            var phpProcess = server.GetProcess();
             if (phpProcess == null)
             {
                 // Console.WriteLine("phpProcessが存在しないので終了します。");
@@ -108,110 +115,41 @@ internal class HmTinyHttpServer
     }
 
 
+    // DLLインポート
+    [DllImport("Kernel32")]
+    private static extern bool SetConsoleCtrlHandler(HandlerRoutine Handler, bool Add);
 
-    static Process phpProcess;
+    // デリゲート
+    private delegate bool HandlerRoutine(CtrlTypes CtrlType);
 
-    // PHPデーモンのスタート
-    HmTinyHttpServer()
+    // コンソール制御イベントの種類
+    private enum CtrlTypes
     {
-        try
-        {
-            Destroy();
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.ToString() + "\r\n");
-        }
-    }
-    ~HmTinyHttpServer()
-    {
-        Destroy();
+        CTRL_C_EVENT = 0,
+        CTRL_BREAK_EVENT = 1,
+        CTRL_CLOSE_EVENT = 2, // ログオフ、シャットダウン
+        CTRL_LOGOFF_EVENT = 5, // ログオフ
+        CTRL_SHUTDOWN_EVENT = 6 // シャットダウン
     }
 
-    public int Launch()
+    // コールバック関数
+    private static bool ConsoleCtrlCheck(CtrlTypes ctrlType)
     {
-        return CreatePHPServerProcess();
-    }
-
-
-    private static int getFreePort()
-    {
-        try
+        switch (ctrlType)
         {
-            var ipGP = IPGlobalProperties.GetIPGlobalProperties();
-            if (ipGP == null)
-            {
-                // Console.WriteLine("IPGlobalPropertiesの取得に失敗しました。");
-                return 0;
-            }
-
-            var usedPorts = new HashSet<int>(ipGP.GetActiveTcpListeners()
-                                              .Concat(ipGP.GetActiveUdpListeners())
-                                              .Select(endpoint => endpoint.Port));
-
-            for (int port = 49152; port <= 65535; port++)
-            {
-                if (!usedPorts.Contains(port))
-                {
-                    // Console.WriteLine($"利用可能なポートが見つかりました: {port}");
-                    return port;
-                }
-            }
-
-            // Console.WriteLine("利用可能なポートが見つかりませんでした。");
-            return 0;
-        }
-        catch (NetworkInformationException ex)
-        {
-            return 0;
-        }
-        catch (Exception ex)
-        {
-            // Console.WriteLine("なんか知らんがエラー");
-            return 0;
+            case CtrlTypes.CTRL_C_EVENT:
+            case CtrlTypes.CTRL_BREAK_EVENT:
+            case CtrlTypes.CTRL_CLOSE_EVENT:
+            case CtrlTypes.CTRL_LOGOFF_EVENT:
+            case CtrlTypes.CTRL_SHUTDOWN_EVENT:
+                server?.Destroy();
+                // Console.WriteLine("ログアウトまたはシャットダウンを検出しました。アプリケーションを終了します。");
+                // 終了処理をここに記述
+                Environment.Exit(0); // アプリケーションを終了
+                return true; // 他のイベントは処理しない
+            default:
+                return false; // 他のイベントは処理しない
         }
     }
 
-    // PHPプロセス生成
-    private int CreatePHPServerProcess()
-    {
-        try
-        {
-            int port = getFreePort();
-
-            phpProcess = new Process();
-            ProcessStartInfo psi = phpProcess.StartInfo;
-            psi.FileName = Path.Combine(System.AppContext.BaseDirectory, phpExePath);
-            psi.Arguments = $" -S {phpHostName}:{port} -t \"{phpServerDocumentFolder}\" ";
-            // Console.WriteLine(psi.FileName);
-            // Console.WriteLine(psi.Arguments);
-            psi.WorkingDirectory = (System.AppContext.BaseDirectory);
-
-            psi.UseShellExecute = false;
-            psi.CreateNoWindow = true;
-            psi.RedirectStandardOutput = false;
-            psi.RedirectStandardError = false;
-            psi.WindowStyle = ProcessWindowStyle.Hidden;
-            phpProcess.Start();
-            return port;
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.ToString() + "\r\n");
-        }
-
-        return 0;
-    }
-
-
-    private void Destroy()
-    {
-        try
-        {
-            phpProcess?.Kill();
-        }
-        catch (Exception)
-        {
-        }
-    }
 }
