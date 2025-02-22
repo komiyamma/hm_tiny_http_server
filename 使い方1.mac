@@ -16,11 +16,11 @@ var port = 0;
 
 if (server) {
     port = server.start();
+    if (port) {
+        openBrowserPane(port);
+    }
 }
 
-if (port) {
-    openBrowserPane(port);
-}
 
 function openBrowserPane(port) {
     var url = "http://localhost:" + port + "/index.html";
