@@ -70,6 +70,34 @@ var createTinyHttpServer;
                 return 0;
             },
 
+            startAsync: function (onPort) {
+                // コマンドライン構築
+                var command = hidemaruGlobal.sprintf('%s\\%s "%s" %d', currentJsDirectory, "\\HmTinyHttpServer.exe", props.rootFolder, hidemaru.getCurrentWindowHandle());
+
+                var sendPort = false;
+
+                // 実行してみる
+                this.processInfo = hidemaru.runProcess(command, ".", "stdioAlive", "utf8");
+                if (this.processInfo) {
+
+                    this.processInfo.stdOut.onReadLine(function (output) {
+                        if (sendPort) { return; }
+                        var port = Number(output);
+                        if (port > 0) {
+                            onPort(port);
+                        } else {
+                            onPort(0);
+                        }
+                        sendPort = true;
+                    }
+                    );
+                } else {
+                    if (sendPort) { return; }
+                    onPort(0);
+                    sendPort = true;
+                }
+            },
+
             close: function () {
                 // 前回この「currentmacrofilename」でのjs実行空間内でサーバーを立ち上げてるなら終了
                 if (this.processInfo) {
