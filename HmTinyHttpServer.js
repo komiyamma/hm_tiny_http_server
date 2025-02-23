@@ -1,5 +1,5 @@
 /*
- * HmTinyHttpServer v 1.1.1.1
+ * HmTinyHttpServer v 1.1.1.2
  * Copyright (C) 2025 Akitsugu Komiyama
  * under the MIT License
  */ 
@@ -11,16 +11,21 @@ var createTinyHttpServer;
     if (typeof(createTinyHttpServer) == "function") {
         return;
     }
+
+    // 基本はexecjsから呼び出すが、理論上はこの.js全体をevalすることも可能ではある。
     var currentJsFileName = hidemaruGlobal.currentjsfilename() || hidemaruGlobal.currentmacrofilename();
     var splitted = currentJsFileName.split("\\");
     splitted.pop();
     var currentJsDirectory = splitted.join("\\");
 
+    // エラー用途
     function output(msg) {
         var dllobj = hidemaru.loadDll("HmOutputPane.dll");
         return dllobj.dllFuncW.OutputW(hidemaru.getCurrentWindowHandle(), msg + "\r\n");
     }
 
+    // クラス的なもの。コンストラクタ的なもの
+    // props { rootFolder: "C:\\path\\to\\folder" }
     createTinyHttpServer = function (props) {
 
         if (!props) {
@@ -33,12 +38,14 @@ var createTinyHttpServer;
             return null;
         }
 
+        // それ「ディレクトリ」なんだろうな？ おん？
         var is_directory = hidemaruGlobal.existfile(props.rootFolder, 1) & 0x00000010;
         if (!is_directory) {
             output("「" + props.rootFolder + "」というフォルダ存在しません。");
             return null;
         }
 
+        // 実質的にユーザが利用すうるインスタンスのメソッド
         return {
 
             processInfo: null,
@@ -70,12 +77,6 @@ var createTinyHttpServer;
                 }
             }
         };
-
     }
-
-    if (typeof (module) != 'undefined' && module.exports) {
-        module.exports = createTinyHttpServer;
-    }
-
 
 })();
