@@ -1,7 +1,6 @@
 /*
  * HmTinyHttpServer v 1.1.1.1
- * Copyright (C) 2025 Akitsugu Komiyama
- * under the MIT License
+ * This codes is licensed under CC0 1.0 Universal
  */ 
 
 var createTinyHttpServer;

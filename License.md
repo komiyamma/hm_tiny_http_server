@@ -1,4 +1,10 @@
-- HmTinyHttpServer
+- HmTinyHttpServer.js
+
+    This file is CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
+
+
+
+- HmTinyHttpServer.exe
 
   Copyright (c) 2025 Akitsugu Komiyama
 
