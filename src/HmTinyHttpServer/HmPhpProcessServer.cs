@@ -40,7 +40,7 @@ internal partial class HmTinyHttpServer
 
                 phpProcess = new Process();
                 ProcessStartInfo psi = phpProcess.StartInfo;
-                psi.FileName = Path.Combine(System.AppContext.BaseDirectory, phpExePath);
+                psi.FileName = phpExeFullPath;
                 psi.Arguments = $" -S {phpHostName}:{port} -t \"{phpServerDocumentFolder}\" ";
                 // Console.WriteLine(psi.FileName);
                 // Console.WriteLine(psi.Arguments);

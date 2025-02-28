@@ -14,7 +14,7 @@ internal partial class HmTinyHttpServer
 
     static HmPhpProcessServer server;
 
-    static string phpExePath = Path.Combine(System.AppContext.BaseDirectory, "php.exe");
+    static string phpExeFullPath = Path.Combine(System.AppContext.BaseDirectory, "php.exe");
 
     const string phpHostName = "localhost";
 

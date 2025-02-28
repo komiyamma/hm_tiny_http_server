@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "G:\\repogitory\\hm_tiny_http_server\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmtinyhttpserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmtinyhttpserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmtinyhttpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmtinyhttpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,7 +33,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,20 +41,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HmPhpProcessServer.cs",
-              "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmPhpProcessServer.cs",
-              "RelativeDocumentMoniker": "HmTinyHttpServer\\HmPhpProcessServer.cs",
-              "ToolTip": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmPhpProcessServer.cs",
-              "RelativeToolTip": "HmTinyHttpServer\\HmPhpProcessServer.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAYwAIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T22:28:37.628Z",
+              "DocumentIndex": 0,
+              "Title": "HmTinyHttpServer",
+              "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.csproj",
+              "RelativeDocumentMoniker": "HmTinyHttpServer\\HmTinyHttpServer.csproj",
+              "ToolTip": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.csproj",
+              "RelativeToolTip": "HmTinyHttpServer\\HmTinyHttpServer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-28T02:49:54.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "HmPhpProcessServer.cs",
+              "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmPhpProcessServer.cs",
+              "RelativeDocumentMoniker": "HmTinyHttpServer\\HmPhpProcessServer.cs",
+              "ToolTip": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmPhpProcessServer.cs",
+              "RelativeToolTip": "HmTinyHttpServer\\HmPhpProcessServer.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwCoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T22:28:37.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HmGetFreePort.cs",
               "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmGetFreePort.cs",
               "RelativeDocumentMoniker": "HmTinyHttpServer\\HmGetFreePort.cs",
@@ -58,23 +74,23 @@
               "RelativeToolTip": "HmTinyHttpServer\\HmGetFreePort.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T22:25:24.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T22:25:24.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "HmTinyHttpServer",
               "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.csproj",
               "RelativeDocumentMoniker": "HmTinyHttpServer\\HmTinyHttpServer.csproj",
               "ToolTip": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.csproj",
               "RelativeToolTip": "HmTinyHttpServer\\HmTinyHttpServer.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-21T12:31:55.805Z"
+              "WhenOpened": "2025-02-21T12:31:55.805Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Microsoft.NETCore.Native.Publish.targets",
               "DocumentMoniker": "C:\\Users\\master\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.13\\build\\Microsoft.NETCore.Native.Publish.targets",
               "ToolTip": "C:\\Users\\master\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.13\\build\\Microsoft.NETCore.Native.Publish.targets",
@@ -84,13 +100,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "HmTinyHttpServer.cs",
               "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.cs",
               "RelativeDocumentMoniker": "HmTinyHttpServer\\HmTinyHttpServer.cs",
               "ToolTip": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.cs",
               "RelativeToolTip": "HmTinyHttpServer\\HmTinyHttpServer.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAcwIMAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwBAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T23:32:21.2Z",
               "EditorCaption": ""

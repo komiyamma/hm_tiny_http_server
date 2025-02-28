@@ -7,9 +7,9 @@
     <Nullable>disable</Nullable>
     <PublishAot>true</PublishAot>
     <InvariantGlobalization>true</InvariantGlobalization>
-	<AssemblyVersion>1.1.1.1</AssemblyVersion>
-	<FileVersion>1.1.1.1</FileVersion>
-	<Version>1.1.1.1</Version>
+	<AssemblyVersion>1.1.1.2</AssemblyVersion>
+	<FileVersion>1.1.1.2</FileVersion>
+	<Version>1.1.1.2</Version>
 	<Authors>Akitsugu Komiyama</Authors>
 	<Copyright>2025 @ $(Authors)</Copyright>
 	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
