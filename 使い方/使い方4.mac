@@ -1,0 +1,35 @@
+﻿debuginfo(2);
+debuginfo("開始r\r\n");
+
+#a = 3333;
+
+$ROOT_FOLDER = @"C:\あいうえお";
+
+// JSがわからない人は、ここからはコピペで考えない、とにかくlocalhost:#PORTというhttpサーバーが立って
+// マクロ変数「#PORT」に実際のポート番号が入る。
+// ------------------------------------------
+jsmode "JScript\\" + currentmacrofilename;
+execjs macrodir + @"\HmTinyHttpServer\HmTinyHttpServer.js";
+
+js{
+    var server; // 初期化しないこと。マクロ実行空間を超えて維持する必要があるので、var
+    if (server) { server.close(); }
+    server = createTinyHttpServer({rootFolder:getVar("$ROOT_FOLDER")});
+    var port = 0;
+    if (server) { port = server.start(); }
+    setVar("#PORT", port);
+} // js
+// ------------------------------------------
+
+if (#PORT > 0) {
+    $URL = "http://localhost:" + str(#PORT) + "/index.html";
+    message($URL);
+    setbrowserpanetarget "_each";
+    showbrowserpane 1;
+    setbrowserpaneurl $URL;
+    setbrowserpanesize 500;
+}
+
+
+
+

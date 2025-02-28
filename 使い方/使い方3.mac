@@ -1,0 +1,29 @@
+﻿jsmode "WebView2\\" + currentmacrofilename;
+
+execjs macrodir + @"\HmTinyHttpServer\HmTinyHttpServer.js";
+
+js{
+
+debuginfo(2);
+server?.close();
+
+var server = createTinyHttpServer({rootFolder:"C:\\あいうえお"});
+server?.startAsync(openBrowserPane);
+
+function openBrowserPane(port) {
+    const url = `http://localhost:${port}/index.html`;
+
+    console.log(url);
+    browserpanecommand(
+    {
+        target: "_each",
+        url: url,
+        show: 1,
+        size: 500,
+        initialize: "async"
+    });
+}
+
+
+} // js
+

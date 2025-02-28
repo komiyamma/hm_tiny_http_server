@@ -37,81 +37,108 @@ internal partial class HmTinyHttpServer
 
     static async Task Main(String[] args)
     {
-        if (args.Length < 2)
-        {
-            return;
-        }
-
         try
         {
-            phpServerDocumentFolder = args[0];
-            hmWndHandle = (nint)long.Parse(args[1]);
-        }
-        catch (Exception) {
-            return;
-        }
+            if (args.Length < 2)
+            {
+                return;
+            }
 
-        server = new HmPhpProcessServer();
-        int port = server.Launch();
-        Console.WriteLine(port); // ポート番号の出力
-        if (port == 0)
+            try
+            {
+                phpServerDocumentFolder = args[0];
+                hmWndHandle = (nint)long.Parse(args[1]);
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
+            // セマフォを作成または取得
+            bool createdNew;
+            semaphore = new Semaphore(1, 1, SemaphoreName, out createdNew);
+
+            // セマフォ取得。タイムアウトを設定してデッドロックを回避
+            if (!semaphore.WaitOne(TimeSpan.FromSeconds(2))) // 2秒待機
+            {
+                Console.WriteLine(0); // ポート番号の出力
+                Console.Error.WriteLine("別のプロセスが実行中です。");
+                semaphore.Close(); // セマフォを解放
+                return; // タイムアウトした場合は終了
+            }
+
+            server = new HmPhpProcessServer();
+            int port = server.Launch();
+            Console.WriteLine(port); // ポート番号の出力
+            if (port == 0)
+            {
+                ClearSemaphore();
+                return;
+            }
+
+            // 秀丸側のrunProcessのstdioAliveのprocessの終わらせ方が判然としない
+            // ProcessExitにも反応する
+            AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
+
+            // 秀丸側のrunProcessのstdioAliveのprocessの終わらせ方が判然としない
+            // Win32レベルで、シャットダウンやログアウトも含めこのコンソールへの終了のあらゆる促しに感知するようにしておく
+            SetConsoleCtrlHandler(ConsoleCtrlCheck, true);
+
+            // 標準入力監視タスクを開始
+            Task inputTask = Task.Run(InputTask);
+
+            await Task.Delay(150); // 0.15秒待つ
+            ClearSemaphore();
+
+            while (true)
+            {
+                await Task.Delay(1000); // 1秒待つ
+                if (!IsWindow(hmWndHandle))
+                {
+                    // Console.WriteLine("hmWndHandleが存在しなくなったので終了します。");  
+                    break;
+                }
+
+                var phpProcess = server.GetProcess();
+                if (phpProcess == null)
+                {
+                    // Console.WriteLine("phpProcessが存在しないので終了します。");
+                    break;
+                }
+                if (phpProcess.HasExited)
+                {
+                    // Console.WriteLine("phpProcessが終了したので終了します。");
+                    break;
+                }
+                if (inputTask.IsCompleted) // 何か標準入力があっても終了
+                {
+                    // Console.WriteLine("標準入力監視タスクが完了したので終了します。");
+                    break;
+                }
+                if (Environment.HasShutdownStarted)
+                {
+                    // Console.WriteLine("Environment.HasShutdownStartedがtrueになったので終了します。");
+                    break;
+                }
+            }
+
+            server?.Destroy();
+            // Console.WriteLine($"秀丸ウィンドウハンドル:{hmWndHandle}から呼ばれた{nameof(HmTinyHttpServer)}はクローズします。");
+            // 何か外部からインプットがあれば終了し、このserverインスタンスが終われば、対応したphpサーバープロセスもkillされる。
+        }
+        finally
         {
-            return;
+            // セマフォを解放
+            ClearSemaphore();
         }
-
-        // 秀丸側のrunProcessのstdioAliveのprocessの終わらせ方が判然としない
-        // ProcessExitにも反応する
-        AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
-
-        // 秀丸側のrunProcessのstdioAliveのprocessの終わらせ方が判然としない
-        // Win32レベルで、シャットダウンやログアウトも含めこのコンソールへの終了のあらゆる促しに感知するようにしておく
-        SetConsoleCtrlHandler(ConsoleCtrlCheck, true);
-
-        // 標準入力監視タスクを開始
-        Task inputTask = Task.Run(InputTask);
-
-
-        while (true)
-        {
-            await Task.Delay(1000); // 1秒待つ
-            if (!IsWindow(hmWndHandle))
-            {
-                // Console.WriteLine("hmWndHandleが存在しなくなったので終了します。");  
-                break;
-            }
-
-            var phpProcess = server.GetProcess();
-            if (phpProcess == null)
-            {
-                // Console.WriteLine("phpProcessが存在しないので終了します。");
-                break;
-            }
-            if (phpProcess.HasExited)
-            {
-                // Console.WriteLine("phpProcessが終了したので終了します。");
-                break;
-            }
-            if (inputTask.IsCompleted) // 何か標準入力があっても終了
-            {
-                // Console.WriteLine("標準入力監視タスクが完了したので終了します。");
-                break;
-            }
-            if (Environment.HasShutdownStarted)
-            {
-                // Console.WriteLine("Environment.HasShutdownStartedがtrueになったので終了します。");
-                break;
-            }
-        }
-
-        server?.Destroy();
-        // Console.WriteLine($"秀丸ウィンドウハンドル:{hmWndHandle}から呼ばれた{nameof(HmTinyHttpServer)}はクローズします。");
-        // 何か外部からインプットがあれば終了し、このserverインスタンスが終われば、対応したphpサーバープロセスもkillされる。
     }
 
     private static void OnProcessExit(object sender, EventArgs e)
     {
         server?.Destroy();
         // Console.WriteLine("OnProcessExit");
+
+        ClearSemaphore();
     }
 
 
@@ -143,6 +170,7 @@ internal partial class HmTinyHttpServer
             case CtrlTypes.CTRL_LOGOFF_EVENT:
             case CtrlTypes.CTRL_SHUTDOWN_EVENT:
                 server?.Destroy();
+                ClearSemaphore();
                 // Console.WriteLine("ログアウトまたはシャットダウンを検出しました。アプリケーションを終了します。");
                 // 終了処理をここに記述
                 Environment.Exit(0); // アプリケーションを終了

@@ -1,0 +1,82 @@
+﻿jsmode "JScript\\" + currentmacrofilename;
+
+execjs macrodir + @"\HmTinyHttpServer\HmTinyHttpServer.js";
+
+js{
+
+debuginfo(2);
+var server_1; // 初期化しないこと。マクロ実行空間を超えて維持する必要があるので、varで。
+
+if (server_1) {
+    server_1.close();
+}
+
+server_1 = createTinyHttpServer({rootFolder:"C:\\あいうえお"});
+if (server_1) {
+    var port1 = server_1.start();
+    if (port1) {
+        openRenderPane1(port1);
+    }
+    // server_1.startAsync(openRenderPane1);
+}
+
+
+
+var server_2; // 初期化しないこと。マクロ実行空間を超えて維持する必要があるので、varで。
+
+if (server_2) {
+    server_2.close();
+}
+
+server_2 = createTinyHttpServer({rootFolder:"C:\\かきくけこ"});
+if (server_2) {
+    var port2 = server_2.start();
+    if (port2) {
+        openRenderPane2(port2);
+    }
+    // server_2.startAsync(openRenderPane2);
+}
+
+
+
+
+function openRenderPane1(port) {
+    if (!port) {
+        console.log("サーバー構築に失敗");
+        return;
+    }
+
+    var url = "http://localhost:" + port + "/index.html";
+
+    renderpanecommand(
+    {
+        target: "mytarget_test1",
+        url: url,
+        show: 1,
+        size: 350,
+        initialize: "async"
+    });
+}
+
+
+function openRenderPane2(port) {
+    if (!port) {
+        console.log("サーバー構築に失敗");
+        return;
+    }
+
+    var url = "http://localhost:" + port + "/index.html";
+
+    renderpanecommand(
+    {
+        target: "mytarget_test2",
+        url: url,
+        show: 1,
+        size: 350,
+        initialize: "async"
+    });
+}
+
+
+} // js
+
