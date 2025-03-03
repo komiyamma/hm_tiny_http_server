@@ -63,7 +63,7 @@ internal partial class HmTinyHttpServer
             {
                 Console.WriteLine(0); // ポート番号の出力
                 Console.Error.WriteLine("別のプロセスが実行中です。");
-                semaphore.Close(); // セマフォを解放
+                ClearSemaphore();
                 return; // タイムアウトした場合は終了
             }
 

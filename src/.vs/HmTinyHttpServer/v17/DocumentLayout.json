@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "G:\\repogitory\\hm_tiny_http_server\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmtinyhttpserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmtinyhttpserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmtinyhttpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmtinyhttpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,16 +15,12 @@
       "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmsemaphorelock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmgetfreeport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmgetfreeport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmphpprocessserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmphpprocessserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmtinyhttpserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmtinyhttpserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmgetfreeport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|solutionrelative:hmtinyhttpserver\\hmgetfreeport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E3B24075-3FF5-436A-9609-C808D9FF4672}|HmTinyHttpServer\\HmTinyHttpServer.csproj|g:\\repogitory\\hm_tiny_http_server\\src\\hmtinyhttpserver\\hmtinyhttpserver.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -37,7 +37,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,19 +45,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "HmSemaphoreLock.cs",
               "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmSemaphoreLock.cs",
               "RelativeDocumentMoniker": "HmTinyHttpServer\\HmSemaphoreLock.cs",
               "ToolTip": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmSemaphoreLock.cs",
               "RelativeToolTip": "HmTinyHttpServer\\HmSemaphoreLock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T20:24:00.214Z"
+              "WhenOpened": "2025-02-28T20:24:00.214Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "HmTinyHttpServer.csproj",
               "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.csproj",
               "RelativeDocumentMoniker": "HmTinyHttpServer\\HmTinyHttpServer.csproj",
@@ -65,7 +66,8 @@
               "RelativeToolTip": "HmTinyHttpServer\\HmTinyHttpServer.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-28T02:49:54.09Z"
+              "WhenOpened": "2025-02-28T02:49:54.09Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -77,11 +79,12 @@
               "RelativeToolTip": "HmTinyHttpServer\\HmPhpProcessServer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T22:28:37.628Z"
+              "WhenOpened": "2025-02-22T22:28:37.628Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "HmGetFreePort.cs",
               "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmGetFreePort.cs",
               "RelativeDocumentMoniker": "HmTinyHttpServer\\HmGetFreePort.cs",
@@ -115,13 +118,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "HmTinyHttpServer.cs",
               "DocumentMoniker": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.cs",
               "RelativeDocumentMoniker": "HmTinyHttpServer\\HmTinyHttpServer.cs",
               "ToolTip": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.cs",
               "RelativeToolTip": "HmTinyHttpServer\\HmTinyHttpServer.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAawDkAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAArwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T23:32:21.2Z",
               "EditorCaption": ""
