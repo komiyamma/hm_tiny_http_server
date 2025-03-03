@@ -2,7 +2,7 @@
 
 internal partial class HmTinyHttpServer
 {
-    private const string SemaphoreName = "HmTinyHttpServerSemaphore";
+    private const string SemaphoreName = @"Global\HmTinyHttpServerSemaphore";
     private static Semaphore semaphore;
 
     private static void ClearSemaphore()
