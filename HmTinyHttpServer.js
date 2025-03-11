@@ -1,5 +1,5 @@
 /*
- * HmTinyHttpServer v 1.1.1.1
+ * HmTinyHttpServer v 1.1.1.2
  * This codes is licensed under CC0 1.0 Universal
  */ 
 
