@@ -1,6 +1,6 @@
 # HmTinyHttpServer
 
-![HmTinyHttpServer v1.1.1](https://img.shields.io/badge/HmTinyHttpServer-v1.1.1-6479ff.svg)
+![HmTinyHttpServer latest release](https://img.shields.io/github/v/release/komiyamma/hm_tiny_http_server)
 [![MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 ![Hidemaru 9.25](https://img.shields.io/badge/Hidemaru-v9.25-6479ff.svg)
 
