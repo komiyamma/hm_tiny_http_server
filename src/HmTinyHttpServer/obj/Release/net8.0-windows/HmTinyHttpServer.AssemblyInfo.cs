@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("2025 @ Akitsugu Komiyama")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.1.2")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.1.2+8cb74b2be084aa56968bec795bf3812394dafd53")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.1.2+c8455550af6e13d04b9ea39628a9dc4215b26f49")]
 [assembly: System.Reflection.AssemblyProductAttribute("HmTinyHttpServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HmTinyHttpServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.1.1.2")]

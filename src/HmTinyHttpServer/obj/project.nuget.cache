@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "nEvJzyNTBBA=",
+  "dgSpecHash": "QSH0G7WxxCE=",
   "success": true,
   "projectFilePath": "G:\\repogitory\\hm_tiny_http_server\\src\\HmTinyHttpServer\\HmTinyHttpServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\master\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.13\\microsoft.dotnet.ilcompiler.8.0.13.nupkg.sha512",
-    "C:\\Users\\master\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.17\\microsoft.net.illink.tasks.8.0.17.nupkg.sha512",
+    "C:\\Users\\master\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.19\\microsoft.net.illink.tasks.8.0.19.nupkg.sha512",
     "C:\\Users\\master\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.13\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.13.nupkg.sha512"
   ],
   "logs": []
